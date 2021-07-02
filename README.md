@@ -1,7 +1,7 @@
 # yelp-fake-reviews-detector
 A machine learning system to detect fake reviews on Yelp.
 
-<img src="pics/app_demo.gif"/>
+Live Link: https://spam-review-detector.herokuapp.com/
 
 ## Model training
 Refer to the <a href="">Jupyter notebooks</a> in research folder to know the steps taken for preprocessing, model development and algorithms used.
@@ -28,5 +28,4 @@ Use pip install/conda install to download following packages
   - fake_reviews.txt and real_reviews.txt contains some reviews 
   that can be used to test the working of model.
   
-# Spam-Detector
-"# Fake-Review-Detector" 
+# "Fake-Review-Detector" 
