@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Review checker</title>
+        <!-- CSS -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+ <style type="text/css">
+ 
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+  background: rgb(81,155,197);
+	background: linear-gradient(180deg, rgba(81,155,197,1) 0%, #d4d4d4 100%);
+	background-repeat: no-repeat;
+	background-color: #d4d4d4;
+	transition: background-color .5s;
+	
+}
+</style>
+<script>
+  document.getElementById("id_text").innerHTML="Enter Review Text :";
+</script>
+</head>
+
+    <body class="animate__animated animate__fadeIn">
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1 mx-auto name">Spam Review Detector</span>
+      <form class="d-flex">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                Creators
+            </button>
+            <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Creators</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+            <div class="row">
+              <div class="col mx-auto">
+                <p style="font-weight: bolder;">1. Vrinda Vyas</p>
+                <a class="btn btn-link" style="color: #007bff !important;" href="https://www.linkedin.com/in/vrinda-s-vyas/" target="_blank">linkedin</a>
+                <br><br>
+              </div>
+              <div class="col mx-auto">
+                <p style="font-weight: bolder;">2. Tushar Bendarkar</p>
+                <a class="btn btn-link" style="color: #007bff !important;" href="https://www.linkedin.com/in/tushar-bendarkar-74748b196/" target="_blank">linkedin</a>
+                <br><br>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col mx-auto">
+                <p style="font-weight: bolder;">3. Pranali Patil</p>
+                <a class="btn btn-link" style="color: #007bff !important;" href="https://www.linkedin.com/in/pranali-patil-5775a2163" target="_blank">linkedin</a>
+                <br><br>
+              </div>
+              <div class="col mx-auto">
+                <p style="font-weight: bolder;">4. Anand Rathi</p>
+                <a class="btn btn-link" style="color: #007bff !important;" href="https://www.linkedin.com/in/anand-rathi-896a7a181/" target="_blank">linkedin</a>
+                <br><br>
+              </div>
+            </div>
+
+    
+      </div>
+      <div class="modal-footer">
+        <p class="col mx-auto" style="font-weight: bolder;">Guided By : Prof. Sumit Muddalkar</p>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a class="btn btn-success" href="https://github.com/imvrinda/Fake-Review-Detector" target="_blank">Github</a>
+      </div>
+    </div>
+  </div>
+  </div>
+      </form>
+    </div>
+  </nav>
+
+
+
+        <!-- <h1>Data mining based system to check review</h1> -->
+        <!-- {% for item in results %} 
+            <h2> {{ item.pred }}</h2>
+            <p> model accuracy is {{ item.acc }}</p>
+        {% endfor %} -->
+   <div class="container"> 
+    <div class="box" style="padding: 4rem 2rem;"> 
+        
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-success" type="submit">Submit</button>
+                <input class="btn btn-primary" onClick="yourFunction();" type="reset" value="Reset">
+          
+     
+
+          <p> <h3>{{ results }}</h3></p>
+          <p> <h3>{{ prob }}</h3></p>
+            </form>
+        </div>
+      </div>
+  
+
+    </body>
+      <!-- JS -->
+  <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
+  
+</html>
